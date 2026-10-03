@@ -78,7 +78,12 @@ function startRoller(id, delay) {
   var phrases = stack.querySelectorAll(".roller-phrase");
   if (!phrases.length || reduceMotion) return;
   var idx = 0;
-  function fit() { stack.style.width = phrases[idx].offsetWidth + "px"; }
+  var widths = [];
+  function measure() {
+    widths = [];
+    for (var i = 0; i < phrases.length; i++) widths.push(phrases[i].offsetWidth);
+  }
+  function fit() { stack.style.width = widths[idx] + "px"; }
   function advance() {
     var cur = phrases[idx];
     idx = (idx + 1) % phrases.length;
@@ -89,9 +94,10 @@ function startRoller(id, delay) {
     fit();
     window.setTimeout(function () { cur.classList.remove("is-exiting"); }, 550);
   }
-  fit();
-  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(fit); }
-  window.addEventListener("resize", fit);
+  function refit() { measure(); fit(); }
+  refit();
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(refit); }
+  window.addEventListener("resize", refit);
   window.setTimeout(function () {
     window.setInterval(advance, 2500);
   }, delay);
