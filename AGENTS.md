@@ -3,7 +3,9 @@
 Vanilla HTML/CSS/JS portfolio. No framework, no build step, no dependencies.
 Files: `index.html`, `projects.html`, `gallery.html`, `404.html`, `styles.css`,
 `script.js` (shared by all pages, every module self-guards for missing elements),
-`photos/`, `cursors/`. No git repo, no README, no CI.
+`photos/`, `cursors/` (license at `cursors/LICENSE-bibata.txt`). Git repo with
+`origin https://github.com/crodyy/portfolio.git` (branch `main`); `CNAME`
+holds the custom domain (`crod.in`, GitHub Pages) — keep it.
 
 ## Run & verify
 
@@ -16,7 +18,7 @@ Files: `index.html`, `projects.html`, `gallery.html`, `404.html`, `styles.css`,
   Reusable scripts live in `C:\Users\nilam\AppData\Local\Temp\opencode\verify\`
   (navspec, fan-check, theme-check, burger768, row-check, etc.).
 - After any CSS/JS change, bust caches: stylesheet/script tags carry `?v=N`
-  (currently `?v=2`) — bump on every shipped change or browsers serve stale files.
+  (currently `?v=3`) — bump on every shipped change or browsers serve stale files.
 
 ## Shell quoting traps (PowerShell)
 

@@ -99,6 +99,7 @@ function startRoller(id, delay) {
   if (document.fonts && document.fonts.ready) { document.fonts.ready.then(refit); }
   window.addEventListener("resize", refit);
   window.setTimeout(function () {
+    advance();
     window.setInterval(advance, 2500);
   }, delay);
 }
@@ -232,7 +233,7 @@ startRoller("roller-b", 3700);
   var frame = document.querySelector(".nav-avatar");
   var img = frame ? frame.querySelector("img") : null;
   if (!frame || !img) return;
-  var PHOTOS = ["photos/pfp-1.png", "photos/pfp-2.jpg", "photos/pfp-3.png"];
+  var PHOTOS = ["photos/pfp-1.png", "photos/pfp-2.png"];
   var idx = 1;
   frame.addEventListener("click", function () {
     var next = PHOTOS[(idx + 1) % PHOTOS.length];
