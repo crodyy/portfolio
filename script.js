@@ -1,18 +1,16 @@
 var HIDDEN_REPOS = ["crodyy"];
 var PINNED = ["ForenSight", "forest", "dot"];
 var OVERRIDES = {
-  ForenSight: { desc: "case and evidence management platform with role-based access, timelines and pdf reports.", category: "full-stack", badge: "1st \u00B7 national level hackathon", tone: "gold" },
-  forest: { desc: "esp32-s3 sensor node that detects chainsaw and gunshot sounds on-device and reports over lora.", category: "embedded & freertos", badge: "3rd \u00B7 AIESEC hackathon", tone: "bronze" },
-  dot: { desc: "hyprland desktop dotfiles with waybar, rofi, kitty and zsh, themed by pywal.", category: "linux & ricing" },
-  "qoi-port": { desc: "rust port of the qoi image format, verified byte-identical to the c reference.", category: "rust" }
+  ForenSight: { badge: "1st \u00B7 national level hackathon", tone: "gold" },
+  forest: { badge: "3rd \u00B7 AIESEC hackathon", tone: "bronze" }
 };
 var FALLBACK = [
-  { name: "ForenSight", html_url: "https://github.com/crodyy/ForenSight", desc: OVERRIDES.ForenSight.desc, category: "full-stack", badge: OVERRIDES.ForenSight.badge, tone: "gold" },
-  { name: "forest", html_url: "https://github.com/crodyy/forest", desc: OVERRIDES.forest.desc, category: "embedded & freertos", badge: OVERRIDES.forest.badge, tone: "bronze" },
-  { name: "dot", html_url: "https://github.com/crodyy/dot", desc: OVERRIDES.dot.desc, category: "linux & ricing" },
-  { name: "qoi-port", html_url: "https://github.com/crodyy/qoi-port", desc: OVERRIDES["qoi-port"].desc, category: "rust" }
+  { name: "ForenSight", html_url: "https://github.com/crodyy/ForenSight", desc: "case and evidence management platform with role-based access, timelines and pdf reports.", category: "full-stack", badge: OVERRIDES.ForenSight.badge, tone: "gold" },
+  { name: "forest", html_url: "https://github.com/crodyy/forest", desc: "esp32-s3 sensor node that detects chainsaw and gunshot sounds on-device and reports over lora.", category: "embedded & freertos", badge: OVERRIDES.forest.badge, tone: "bronze" },
+  { name: "dot", html_url: "https://github.com/crodyy/dot", desc: "hyprland desktop dotfiles with waybar, rofi, kitty and zsh, themed by pywal.", category: "linux & ricing" },
+  { name: "qoi-port", html_url: "https://github.com/crodyy/qoi-port", desc: "rust port of the qoi image format, verified byte-identical to the c reference.", category: "rust" }
 ];
-var CACHE_KEY = "crodyy-repos-v9";
+var CACHE_KEY = "crodyy-repos-v10";
 var CACHE_TTL = 30 * 60 * 1000;
 
 var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
