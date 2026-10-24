@@ -557,6 +557,6 @@ section[id] { scroll-margin-top: 80px; }
 .hero-line, .reach-line, .skill-label, .skill-pills span,
 .cell-title,
 .vol-dates, .vol-org, .vol-role,
-.site-nav nav a, .logo-btn {
+.site-nav nav a {
   font-size: clamp(1rem, 2vw, 1.25rem);
 }

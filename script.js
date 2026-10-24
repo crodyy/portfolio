@@ -53,21 +53,6 @@ var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
 })();
 
 /* logo toggle: click swaps crod with japanese, click again swaps back */
-(function () {
-  var btn = document.getElementById("lang-btn");
-  var text = document.getElementById("lang-text");
-  if (!btn || !text) return;
-  var showingJa = true;
-  btn.addEventListener("click", function () {
-    text.classList.add("is-fading");
-    window.setTimeout(function () {
-      showingJa = !showingJa;
-      text.textContent = showingJa ? "クロッド" : "crod";
-      text.setAttribute("lang", showingJa ? "ja" : "en");
-      text.classList.remove("is-fading");
-    }, 100);
-  });
-})();
 
 /* hero rollers: 2.5s loop, line two offset 1.2s, grid stacked, transform/opacity only */
 function startRoller(id, delay) {
